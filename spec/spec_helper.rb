@@ -1,6 +1,6 @@
 require 'shoulda/matchers'
 
-require "bundler/setup"
+require 'bundler/setup'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
