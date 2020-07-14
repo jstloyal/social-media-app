@@ -275,6 +275,20 @@ form {
   }
 }
 
+.request-btn {
+  background-color: $primary-color;
+  padding: 3px;
+
+  .request {
+    color: $primary-color-light;
+  }
+}
+
+.reject-request {
+  background-color: #ff6666;
+  padding: 3px;
+}
+
 .users-section {
   width: 100%;
   margin: 10px;

@@ -3,6 +3,12 @@
     <% @users.each do |user| %>
       <li>
         Name: <%= user.name %>
+        <% if @user_requests.include?(user) %>
+          <button class="request-btn"><%= link_to 'Accept request', friendships_path(friend_id: user.id) , method: :post %></button>
+          <button class="reject-request"><%= link_to 'Reject request', friendships_path(user_id: user.id) , method: :delete, class: "request" %></button>
+        <% else %>
+          <button class="request-btn"><%= link_to 'Friend request', friendships_path(friend_id: user.id), method: :post, class: "request" %></button>
+        <% end %>
         <span class="profile-link">
           <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
         </span>

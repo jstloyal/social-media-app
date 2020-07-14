@@ -14,7 +14,7 @@ class User < ApplicationRecord
 
   def friends
     friends_array = friendships.map { |friendship| friendship.friend if friendship.status }
-    friends_array + inverse_friendships.map { |friendship| friendship.user if friendship.status }
+    friends_array += inverse_friendships.map { |friendship| friendship.user if friendship.status }
     friends_array.compact
   end
 
@@ -33,6 +33,6 @@ class User < ApplicationRecord
   end
 
   def friend?(user)
-    friends.include?(user.id)
+    friends.include?(user)
   end
 end
