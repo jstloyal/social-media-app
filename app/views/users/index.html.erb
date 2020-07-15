@@ -4,10 +4,16 @@
       <li>
         Name: <%= user.name %>
         <% if @user_requests.include?(user) %>
-          <button class="request-btn"><%= link_to 'Accept request', friendships_path(friend_id: user.id) , method: :post %></button>
-          <button class="reject-request"><%= link_to 'Reject request', friendships_path(user_id: user.id) , method: :delete, class: "request" %></button>
+          <button class="request-btn"><%= link_to 'Accept request', add_friend_path(friend_id: user.id), method: :post %></button>
+          <button class="reject-request"><%= link_to 'Reject request', remove_friend_path(user_id: user.id) , method: :delete, class: "request" %></button>
         <% else %>
-          <button class="request-btn"><%= link_to 'Friend request', friendships_path(friend_id: user.id), method: :post, class: "request" %></button>
+          <% if @pending_requests.include?(user) %>
+            <button><%= link_to 'Request Pending', '#' %></button> 
+          <% elsif current_user.friend?(user) %>
+            <button class="reject-request"><%= link_to 'Unfriend', remove_friend_path(user_id: user.id), method: :delete %></button>
+          <% elsif user != current_user %>
+            <button class="request-btn"><%= link_to 'Friend request', friendships_path(friend_id: user.id) , method: :post %></button> 
+          <% end %>
         <% end %>
         <span class="profile-link">
           <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>

@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(version: 2020_07_14_173148) do
     t.index ["user_id"], name: "index_friendships_on_user_id"
   end
 
+  create_table "invites", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "friend_id"
+    t.boolean "accept_friend"
+    t.index ["friend_id"], name: "index_invites_on_friend_id"
+    t.index ["user_id"], name: "index_invites_on_user_id"
+  end
+
   create_table "likes", force: :cascade do |t|
     t.integer "post_id"
     t.integer "user_id"
@@ -71,4 +79,6 @@ ActiveRecord::Schema.define(version: 2020_07_14_173148) do
 
   add_foreign_key "friendships", "users"
   add_foreign_key "friendships", "users", column: "friend_id"
+  add_foreign_key "invites", "users"
+  add_foreign_key "invites", "users", column: "friend_id"
 end

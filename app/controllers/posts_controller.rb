@@ -20,6 +20,7 @@ class PostsController < ApplicationController
   private
 
   def timeline_posts
+    # @timeline_posts ||= current_user.friend_and_own_posts.ordered_by_most_recent
     @timeline_posts ||= Post.where(user: current_user.friends + [current_user.id]).ordered_by_most_recent
   end
 

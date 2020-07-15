@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   end
 
   resources :friendships, only: [:create, :destroy]
+  delete 'remove_friend', to: 'friendships#destroy'
+  post 'add_friend', to: 'friendships#create'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
