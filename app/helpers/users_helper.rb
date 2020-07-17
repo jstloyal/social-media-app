@@ -11,4 +11,8 @@ module UsersHelper
       link_to 'Friend request', friendships_path(friend_id: user.id), method: :post, class: 'btn'
     end
   end
+
+  def show_button(user)
+    link_to 'Friend request', friendships_path(friend_id: user.id), method: :post, class: 'btn' if !current_user.friend?(user)
+  end
 end
