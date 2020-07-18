@@ -1,4 +1,5 @@
 require 'shoulda/matchers'
+require 'capybara/rspec'
 
 require 'bundler/setup'
 
