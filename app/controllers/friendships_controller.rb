@@ -1,7 +1,7 @@
 class FriendshipsController < ApplicationController
   def create
     request = current_user.friendships.new(request_params)
-    request.status = true
+    # request.status = true
     request.save
 
     redirect_to users_path
