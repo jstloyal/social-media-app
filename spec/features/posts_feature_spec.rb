@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature 'Log in feature page', type: :feature do
-  feature 'Login an existing user' do
+feature 'Adding a new post', type: :feature do
+  feature 'User need to be logged in to add new post' do
     before(:each) do
       User.create(name: 'Tayo', email: 'tayo@mail.com', password: 'password', password_confirmation: 'password')
       visit '/users/sign_in'

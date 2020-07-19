@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature 'Log in feature page', type: :feature do
-  feature 'Login an existing user' do
+feature 'Creating new comment', type: :feature do
+  feature 'User need to login and fill in comment' do
     before(:each) do
       User.create(name: 'Tayo', email: 'tayo@mail.com', password: 'password', password_confirmation: 'password')
       visit '/users/sign_in'
