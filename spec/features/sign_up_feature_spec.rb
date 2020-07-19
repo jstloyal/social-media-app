@@ -14,7 +14,7 @@ feature 'Sign up feature page', type: :feature do
       expect(page).to have_content("Password can't be blank")
     end
 
-    scenario 'with valid params' do
+    scenario 'when you signup with with valid params' do
       fill_in 'Name', with: 'Jagun'
       fill_in 'Email', with: 'jagun@mail.com'
       fill_in 'Password', with: 'password'
