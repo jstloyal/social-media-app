@@ -20,9 +20,9 @@ feature 'Sign up feature page', type: :feature do
       fill_in 'Password', with: 'password'
       fill_in 'Password confirmation', with: 'password'
       click_on 'Sign up'
-      expect(page).to have_content("Jagun")
-      expect(page).to have_content("Welcome! You have signed up successfully")
-      expect(current_path).to eq("/")
+      expect(page).to have_content('Jagun')
+      expect(page).to have_content('Welcome! You have signed up successfully')
+      expect(current_path).to eq('/')
     end
   end
 end

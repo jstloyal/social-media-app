@@ -13,8 +13,8 @@ feature 'Log in feature page', type: :feature do
     end
 
     scenario 'when you login with valid params' do
-      expect(page).to have_content("Tayo")
-      expect(page).to have_content("SIGN OUT")
+      expect(page).to have_content('Tayo')
+      expect(page).to have_content('SIGN OUT')
     end
   end
 end
