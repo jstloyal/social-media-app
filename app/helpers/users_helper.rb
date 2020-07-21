@@ -1,5 +1,6 @@
 module UsersHelper
   def request_button(user)
+    return if current_user == user
     if @user_requests.include?(user)
       link_to 'Decline friend request', remove_friend_path(user_id: user.id), method: :delete # class: 'btn'
       link_to 'Accept friend request', add_friend_path(friend_id: user.id), method: :post # class: 'btn'
