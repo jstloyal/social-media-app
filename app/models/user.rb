@@ -15,7 +15,7 @@ class User < ApplicationRecord
   def friends
     friends_array = friendships.map { |friendship| friendship.friend if friendship.status == true }
     friends_array += inverse_friendships.map { |friendship| friendship.user if friendship.status == true }
-    friends_array.compact
+    friends_array.compact.uniq
   end
 
   def pending_friends
@@ -30,6 +30,9 @@ class User < ApplicationRecord
     friendship = inverse_friendships.find { |friend| friend.user == user }
     friendship.status = true
     friendship.save
+    reverse_confirmation = friendships.create(friend_id: user)
+    reverse_confirmation.status = true
+    reverse_confirmation.save
   end
 
   def friend?(user)
