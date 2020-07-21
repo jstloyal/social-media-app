@@ -1,7 +1,7 @@
 class FriendshipsController < ApplicationController
   def create
     request = current_user.friendships.new(request_params)
-    # request.status = true
+    request.status = false
     request.save
 
     redirect_to users_path
@@ -17,7 +17,8 @@ class FriendshipsController < ApplicationController
   end
 
   def accept_request
-    current_user.confirm_friend(User.find(params[:user_id]))
+    # byebug
+    current_user.confirm_friend(User.find(params[:friend_id]))
     flash[:notice] = 'Friend request accepted'
     redirect_to users_path
   end

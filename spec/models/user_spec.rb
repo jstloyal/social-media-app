@@ -11,10 +11,4 @@ RSpec.describe User, type: :model do
     it { should have_many(:likes) }
     it { should have_many(:friendships) }
   end
-
-  describe 'class methods' do
-    describe '::friends' do
-      it 'should'
-    end
-  end
 end
