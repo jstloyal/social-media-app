@@ -21,7 +21,6 @@ class FriendshipsController < ApplicationController
   end
 
   def accept_request
-    # byebug
     current_user.confirm_friend(User.find(params[:friend_id]))
     flash[:notice] = 'Friend request accepted'
     redirect_to users_path
