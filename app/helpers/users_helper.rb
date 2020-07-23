@@ -16,14 +16,12 @@ module UsersHelper
   def decline_button(user)
     return if current_user == user
 
-    if @user_requests.include?(user)
-      link_to 'Decline', remove_friend_path(user_id: user.id), method: :delete
-    end
+    return link_to 'Decline', remove_friend_path(user_id: user.id), method: :delete if @user_requests.include?(user)
   end
 
   def show_button(user)
     return if current_user == user
 
-    link_to 'Friend request', friendships_path(friend_id: user.id), method: :post unless current_user.friend?(user)
+    link_to 'Friend request', friendships_path(friend_id: user.id), method: :post unless current_user.friends
   end
 end
