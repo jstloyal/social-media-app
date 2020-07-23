@@ -4,6 +4,7 @@
       <li>
         Name: <%= user.name %>
         <button><%= request_button(user) %></button>
+        <button><%= decline_button(user) %></button>
         <span class='profile-link'>
           <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
         </span>
