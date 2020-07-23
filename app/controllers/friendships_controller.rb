@@ -1,8 +1,6 @@
 class FriendshipsController < ApplicationController
   def create
-    if current_user.friend_requests.to_a.include? User.find(params[:friend_id])
-      redirect_to users_path and return
-    end
+    return redirect_to users_path if current_user.friend_requests.to_a.include? User.find(params[:friend_id])
 
     request = current_user.friendships.build(friend_id: params[:friend_id])
     request.status = false

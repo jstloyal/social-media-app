@@ -32,6 +32,6 @@ class User < ApplicationRecord
   end
 
   def friends_and_own_posts
-    Post.where(user: (self.friends + self))
+    Post.where(user: (current_user.friends + self))
   end
 end
