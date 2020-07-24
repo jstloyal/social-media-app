@@ -51,7 +51,7 @@
 
 ## Live Demo
 
-https://rails-social-media-app.herokuapp.com/
+
 
 ## Getting Started
 
