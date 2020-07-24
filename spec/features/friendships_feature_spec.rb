@@ -21,8 +21,14 @@ feature 'Add new friends', type: :feature do
       visit '/users'
     end
 
-    scenario 'allow user to send friend request to other users' do
+    scenario 'allow user to send friend request to new users' do
       expect(page).to have_content('Friend request')
+    end
+
+    scenario 'allows users to accept friend requests' do
+      Friendship.create(user_id: user2.id, friend_id: user1.id)
+      click_button 'Friend request'
+      expect(page).to have_content('Request Pending')
     end
   end
 end
