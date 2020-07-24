@@ -2,6 +2,53 @@
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/jstloyal/social-media-app">
+    <img src="app/assets/images/microverse.png" alt="Microverse Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">RoR Social Media App</h3>
+
+  <p align="center">
+    This project is part of the Microverse curriculum in Ruby on Rails module!
+    <br />
+    <a href="https://github.com/jstloyal/social-media-app">
+      <img src="app/assets/images/ror-social.png" alt="Microverse Logo" width="1000" height="400">
+    </a><br />
+    <a href="https://github.com/jstloyal/social-media-app"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/jstloyal/social-media-app/issues">Report Bug</a>
+    <a href="https://github.com/jstloyal/social-media-app/issues">Request Feature</a>
+  </p>
+</p>
+
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+
+- [About the Project](#about-the-project)
+- [Contributors](#contributors)
+- [Live Version](#live-version)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
 ## Built With
 
 - Ruby v2.7.0
@@ -10,7 +57,6 @@
 ## Live Demo
 
 TBA
-
 
 ## Getting Started
 
@@ -37,8 +83,6 @@ Setup database with:
    rails db:migrate
 ```
 
-
-
 ### Usage
 
 Start server with:
@@ -57,13 +101,24 @@ Open `http://localhost:3000/` in your browser.
 
 > Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
 
+<p align="center">
+    <a href="https://github.com/jstloyal/social-media-app">
+      <img src="app/assets/images/rspec-tests.png" alt="Test screen" width="800" height="400">
+    </a><br />
+</p>
+
 ### Deployment
 
 TBA
 
 ## Authors
 
-TBA
+## Adetayo Sunkanmi
+
+- Github: [@jstloyal](https://github.com/jstloyal)
+- Twitter: [@jstloyalty](https://twitter.com/jstloyalty)
+- Linkedin: [Adetayo Sunkanmi](https://www.linkedin.com/in/jstloyalty)
+- E-mail: jstloyalty@gmail.com
 
 ## 🤝 Contributing
 
@@ -77,9 +132,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+- [Microverse](https://www.microverse.org/)
+- [Rails Documentation](https://guides.rubyonrails.org/)
 
 ## 📝 License
 
-TBA
-
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
